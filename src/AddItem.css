@@ -1,0 +1,72 @@
+/* AddItem.css */
+
+.addForm {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    padding: 0 0.5rem 0.25rem;
+    border-bottom: 1px solid #ccc; /* Light gray for a subtle border */
+}
+
+.addForm label {
+    position: absolute;
+    left: -9999px; /* Visually hides the label for accessibility */
+}
+
+.addForm input[type='text'] {
+    flex-grow: 1;
+    max-width: calc(100% - 50px);
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-right: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.2s ease-in-out;
+    outline: none;
+}
+
+.addForm input[type='text']:focus {
+    border-color: #5e5e73; /* Matches the app’s primary gray tone */
+}
+
+.addForm button {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 1.2rem; /* Adjusted icon size */
+    background-color: #5e5e73; /* Dark gray for consistency */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.addForm button:focus, 
+.addForm button:hover {
+    background-color: #1a1919; /* Darker for hover effect */
+    color: #ffffff;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .addForm {
+        flex-direction: column;
+        padding: 0.25rem;
+    }
+
+    .addForm input[type='text'] {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+
+    .addForm button {
+        width: 100%;
+    }
+}
